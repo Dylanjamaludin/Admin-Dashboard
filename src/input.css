@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.light
+{
+    --bg:#F0F0F0;
+    --secondary: #02998f;
+    --primary:#FFFFFF;
+    --hover:#F4F4F4;
+    --contrast:#D2D2D2;
+    --text: #000000;
+    --shadow:#0000001A;
+    --icon: #707070;
+}
+
+.dark
+{
+    --bg:#242424;
+    --secondary: #03B5A9;
+    --primary:#313131;
+    --contrast: #727272;
+    --hover:#2D2D2D;
+    --text: #FFFFFF;
+    --shadow:#00000055;
+    --icon: #d4d4d4;
+}

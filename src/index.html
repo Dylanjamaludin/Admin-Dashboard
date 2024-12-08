@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Dashboard Project</title>
+</head>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="./script.js" async></script>
+<body class="w-full h-screen light">
+  <div class="grid md:grid-cols-[auto_1fr] grid-rows-[auto_1fr] h-full ">
+    <div id="header" class="bg-primary grid grid-rows-2 md:col-start-2 col-span-1 gap-3 relative shadow-md shadow-shadow_color">
+      <div class="bg-primary grid grid-cols-3 md:hidden px-3 py-3  backdrop-blur-md shadow-md shadow-shadow_color bg-primary/30 items-center">
+        <div class="">
+          <button title="Menu"  class=" flex flex-row h-9 w-9 self-center items-center justify-center rounded-[10px] hover:bg-hover_color active:text-white active:bg-secondary text-icon_color">
+            <i data-feather="menu" class="inline-block stroke-[3px] size-5"></i>
+          </button>
+        </div>
+        <div class="justify-self-center  flex flex-nowrap items-center ">
+          <i data-feather="grid" class="inline-block align-middle stroke-[3px] size-8 text-secondary"></i>
+          <p class="text-xl text-secondary font-bold align-middle inline text-center">Dashboard</p>
+        </div>
+        <div class="justify-self-end flex flex-row gap-3 flex-nowrap items-center">
+          <button title="Search"  class="flex flex-row h-9 w-9 self-center items-center justify-center rounded-[10px] hover:bg-hover_color active:text-white active:bg-secondary text-icon_color">
+            
+            <i data-feather="search" class="inline-block stroke-[3px] size-5"></i>
+          </button>
+          <button title="More"  class=" flex flex-row h-9 w-9 self-center items-center justify-center rounded-[10px] hover:bg-hover_color active:text-white active:bg-secondary text-icon_color">
+              <i data-feather="more-vertical" class="inline-block align-middle stroke-[3px] size-5"></i>
+          </button>
+          <div id="dropdown" class="transition-[height] top-[3.75rem] overflow-hidden h-0 right-1 flex flex-nowrap flex-col items-center justify-end gap-3 bg-primary absolute rounded-[10px] shadow-md shadow-shadow_color" >
+            <button title="My GitHub"  class=" flex flex-row h-9 w-9 self-center items-center justify-center rounded-[10px] hover:bg-hover_color active:text-white active:bg-secondary text-icon_color">
+              <i data-feather="github" class="inline-block stroke-[3px] size-5"></i>
+            
+            </button>
+            <button title="My Linkedin"  class=" flex flex-row h-9 w-9 self-center items-center justify-center rounded-[10px] hover:bg-hover_color active:text-white active:bg-secondary text-icon_color">
+              <i data-feather="linkedin" class="inline-block stroke-[3px] size-5"></i>
+            
+            </button>
+            <button title="Notifications"  class=" flex flex-row h-9 w-9 self-center items-center justify-center rounded-[10px] hover:bg-hover_color active:text-white active:bg-secondary text-icon_color">
+              <i data-feather="bell" id='test' class=" inline-block stroke-[3px] size-5"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class='hidden md:grid grid-cols-[4fr_1fr] row-span-1 gap-4 bg-primary' id="top">
+        <div class="col-start-1 col-end-2 p-3 flex gap-3 flex-nowrap flex-row justify-start items-center  ">
+
+            <button title="Search"  class="flex flex-row h-9 w-9 self-center items-center justify-center rounded-[10px] hover:bg-hover_color active:text-white active:bg-secondary text-icon_color">
+              <i data-feather="search" class="inline-block align-middle stroke-[3px] size-5"></i>
+            </button>
+
+            <form class="inline grow" action=""><input placeholder="Search Here!" class="placeholder-contrast focus:placeholder text-text_color bg-primary w-full px-3 h-9 align-middle rounded-[10px] border-2 border-contrast focus:border-icon_color outline-none "  type="text"></form>
+
+        </div>
+        <div class="col-start-2 col-end-3 flex flex-nowrap flex-row items-center justify-end p-3 gap-3" >
+          <button title="My GitHub"  class=" flex flex-row h-9 w-9 self-center items-center justify-center rounded-[10px] hover:bg-hover_color active:text-white active:bg-secondary text-icon_color">
+            <i data-feather="github" class="inline-block stroke-[3px] size-5"></i>
+           
+          </button>
+          <button title="My Linkedin"  class=" flex flex-row h-9 w-9 self-center items-center justify-center rounded-[10px] hover:bg-hover_color active:text-white active:bg-secondary text-icon_color">
+            <i data-feather="linkedin" class="inline-block stroke-[3px] size-5"></i>
+           
+          </button>
+          <button title="Notifications"  class=" flex flex-row h-9 w-9 self-center items-center justify-center rounded-[10px] hover:bg-hover_color active:text-white active:bg-secondary text-icon_color">
+            <i data-feather="bell" id='test' class=" inline-block stroke-[3px] size-5"></i>
+          </button>
+        </div>
+      </div>
+      <div id="bottom" class=" row-span-1 grid rid-cols-[4fr_1fr] gap-3 ">
+        <div class="px-3 flex flex-nowrap flex-row gap-3 justify-start items-center">
+          <div class="w-12 h-12 rounded-full overflow-hidden shadow-lg shadow-shadow_color  ">
+            <div class="ml-[-5.75rem] mt-[-2rem] h-60 w-60">
+              <img src='premium_photo-1672115680958-54438df0ab82.jpeg' class="">
+            </div>
+          </div>
+          <div>
+            <p class="text-xs text-icon_color ">Welcome Back!</p>
+            <p class="text-icon_color font-bold">Dylan J</p>
+          </div>
+        </div>
+        <div class="col-start-2 col-end-3 flex flex-nowrap flex-row items-center justify-end px-3 gap-3" >
+          <button title="Add"  class=" flex flex-row lg:gap-3 lg:w-28 h-9 w-9 font-bold self-center items-center justify-center rounded-[10px] hover:bg-hover_color active:text-white active:bg-secondary text-icon_color">
+           <i data-feather="plus" class="text-center inline-block align-middle stroke-[3px] size-5"></i>
+            <p class="lg:inline-block text-center hidden align-middle">New</p>
+          </button>
+          <button title="Upload"  class="  flex flex-row lg:gap-3 lg:w-28 h-9 w-9 font-bold self-center items-center justify-center rounded-[10px] hover:bg-hover_color active:text-white active:bg-secondary text-icon_color">
+            <i data-feather="upload" class="inline-block align-middle stroke-[3px] size-5"></i>
+            <p class="lg:inline-block text-center hidden align-middle">Upload</p>
+          </button>
+          <button title="Share"  class="  flex flex-row lg:gap-3 lg:w-28 h-9 w-9 font-bold self-center items-center justify-center rounded-[10px] hover:bg-hover_color active:text-white active:bg-secondary text-icon_color">
+            <i data-feather="share-2" class="inline-block align-middle stroke-[3px] size-5"></i>
+            <p class="lg:inline-block text-center hidden align-middle">Share</p>
+            
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div id="sidebar" class="md:border-r-4 md:border-hover_color w-0 h-full transition-[width]  top-0 left-0 absolute md:static md:w-60 overflow-y-scroll overflow-x-hidden md:col-span-1 md:row-start-1 md:row-span-2 bg-primary grid shadow-lg shadow-shadow_color grid-rows-[auto_auto_auto_auto_1fr] gap-3">
+      <span class=" px-3 py-3 sticky top-0 backdrop-blur-md shadow-md shadow-shadow_color hidden md:inline bg-primary/30">
+        <i data-feather="grid" class="inline-block align-middle stroke-[3px] size-9 text-secondary"></i>
+        <p class="text-xl text-secondary font-bold align-middle inline-block text-center">Dashboard</p>
+      </span>
+      <span class=" px-3 py-3 sticky top-0 backdrop-blur-md shadow-md shadow-shadow_color  md:hidden bg-primary/30">
+        <button title="Exit"  class="inline-flex flex-row h-9 w-9 self-center text-center align-middle items-center justify-center rounded-[10px] hover:bg-hover_color active:text-white active:bg-red-500 text-icon_color">
+          <i data-feather="x" class="inline-block align-middle stroke-[3px] size-5"></i>
+        </button>
+        <p class="text-xl text-icon_color font-bold align-middle inline text-center">Menu</p>
+      </span>
+      <div class="flex flex-nowrap flex-row justify-center p-3 gap-3 shadow-md shadow-shadow_color items-center" >
+        <button title="Light Mode"  class="gap-2 flex flex-row h-9 w-9 self-center items-center justify-center rounded-[10px] hover:bg-hover_color active:text-white active:bg-secondary text-icon_color">
+          <i data-feather="sun" class="inline-block stroke-[3px] size-5"></i>
+          
+        </button>
+        <button title="OS Mode"  class="gap-2 flex flex-row h-9 w-9 self-center items-center justify-center rounded-[10px] hover:bg-hover_color active:text-white active:bg-secondary text-icon_color">
+          <i data-feather="monitor" class="inline-block stroke-[3px] size-5"></i>
+          
+        </button>
+        <button title="Dark Mode"  class="gap-2 flex flex-row h-9 w-9 self-center items-center justify-center rounded-[10px] hover:bg-hover_color active:text-white active:bg-secondary text-icon_color">
+          <i data-feather="moon" class="inline-block stroke-[3px] size-5"></i>
+         
+        </button>
+      </div>
+      <div class="grid justify-items-start shadow-md shadow-shadow_color">
+        
+        <button title="Home" class="font-bold p-3 text-left  hover:bg-hover_color active:text-white active:bg-secondary align-middle w-full  text-icon_color">
+          <i data-feather="home" class="inline-block align-middle stroke-[3px] size-5"></i>
+          <p class="ml-3 inline align-middle">Home</p>
+        </button>
+        <button title="Profile"  class="font-bold p-3 text-left hover:bg-hover_color active:text-white active:bg-secondary align-middle w-full  text-icon_color">
+          <i data-feather="user" class="  inline-block align-middle stroke-[3px] size-5"></i>
+          <p class="ml-3 inline align-middle">Profile</p>
+        </button>
+        <button title="Messages" class="font-bold p-3 text-left hover:bg-hover_color active:text-white active:bg-secondary align-middle w-full  text-icon_color">
+          <i data-feather="message-square" class="  inline-block align-middle stroke-[3px] size-5"></i>
+          <p class="ml-3 inline align-middle">Messages</p>
+        </button>
+        <button title="History" class="font-bold p-3 text-left hover:bg-hover_color active:text-white active:bg-secondary align-middle w-full  text-icon_color">
+          <i data-feather="clock" class="  inline-block align-middle stroke-[3px] size-5"></i>
+          <p class="ml-3 inline align-middle">History</p>
+        </button>
+        <button title="Tasks" class="font-bold p-3 text-left hover:bg-hover_color active:text-white active:bg-secondary align-middle w-full  text-icon_color">
+          <i data-feather="briefcase" class="  inline-block align-middle stroke-[3px] size-5"></i>
+          <p class="ml-3 inline align-middle">Tasks</p>
+        </button>
+        <button title="Communities" class="font-bold p-3 text-left hover:bg-hover_color active:text-white active:bg-secondary align-middle w-full  text-icon_color">
+          <i data-feather="users" class="  inline-block align-middle stroke-[3px] size-5"></i>
+          <p class="ml-3 inline align-middle">Communites</p>
+        </button>
+
+      </div>
+      <div class="grid justify-items-start shadow-md shadow-shadow_color">
+        <button title="Settings" class="font-bold p-3 text-left hover:bg-hover_color active:text-white active:bg-secondary align-middle w-full  text-icon_color">
+          <i data-feather="settings" class="inline-block align-middle stroke-[3px] size-5"></i>
+          <p class="ml-3 inline align-middle">Settings</p>
+        </button>
+        <button title="Support" class="font-bold p-3 text-left hover:bg-hover_color active:text-white active:bg-secondary align-middle w-full  text-icon_color">
+          <i data-feather="help-circle" class="  inline-block align-middle stroke-[3px] size-5"></i>
+          <p class="ml-3 inline align-middle">Support</p>
+        </button>
+        <button title="Privacy" class="font-bold p-3 text-left hover:bg-hover_color active:text-white active:bg-secondary align-middle w-full  text-icon_color">
+          <i data-feather="shield" class="  inline-block align-middle stroke-[3px] size-5"></i>
+          <p class="ml-3 inline align-middle">Privacy</p>
+        </button>
+      </div>
+    </div>
+    <div id="dashboard" class="overflow-y-scroll bg-bg_color md:col-start-2 col-span-1 flex flex-col p-3 gap-3 ">
+      <div class="grid grid-rows-2 gap-3 h-fit ">
+        <div class="span-1 grid grid-rows-[auto_1fr] gap-3 ">
+          <div>
+            <p class="font-bold text-icon_color">Announcements</p></div>
+          <div class="bg-primary rounded-[10px] h-24 p-6 grid grid-flow-row shadow-md shadow-shadow_color">
+          </div>
+        </div>
+        <div class="span-1 grid grid-rows-[auto_1fr] gap-3 ">
+          <div>
+            <p class="font-bold text-icon_color">Trending</p>
+          </div>
+          <div class="bg-primary rounded-[10px] h-24 p-6 grid grid-flow-row shadow-md shadow-shadow_color">
+
+          </div>
+        </div>
+      </div>
+      <div class=" span-1 grid grid-rows-[auto_1fr] gap-3">
+        <div>
+          <p class="font-bold text-icon_color">Your Projects</p>
+        </div>
+        <div class="overflow-x-scroll md:w-full">
+          <div class="w-full h-auto grid grid-flow-col gap-3 auto-rows-auto md:auto-rows-[none] md:grid-cols-[repeat(auto-fill,minmax(288px,1fr))] md:grid-flow-dense">
+            <div class="bg-gradient-to-r from-secondary from-[3%] via-primary via-[3%] to-primary rounded-[10px] h-52 w-72 md:w-auto  shadow- shadow-shadow_color">
+
+            </div>
+            <div class="bg-gradient-to-r from-secondary from-[3%] via-primary via-[3%] to-primary rounded-[10px] h-52 w-72 md:w-auto  shadow-md shadow-shadow_color">
+
+            </div>
+            <div class="bg-gradient-to-r from-secondary from-[3%] via-primary via-[3%] to-primary rounded-[10px] h-52 w-72 md:w-auto  shadow-md shadow-shadow_color">
+
+            </div>
+            <div class="bg-gradient-to-r from-secondary from-[3%] via-primary via-[3%] to-primary rounded-[10px] h-52 w-72 md:w-auto  shadow-md shadow-shadow_color">
+
+            </div>
+            <div class="bg-gradient-to-r from-secondary from-[3%] via-primary via-[3%] to-primary rounded-[10px] h-52 w-72 md:w-auto  shadow-md shadow-shadow_color">
+
+            </div>
+            <div class="bg-gradient-to-r from-secondary from-[3%] via-primary via-[3%] to-primary rounded-[10px] h-52 w-72 md:w-auto  shadow-md shadow-shadow_color">
+
+            </div>
+            <div class="bg-gradient-to-r from-secondary from-[3%] via-primary via-[3%] to-primary rounded-[10px] h-52 w-72 md:w-auto  shadow-md shadow-shadow_color">
+
+            </div>
+            <div class="bg-gradient-to-r from-secondary from-[3%] via-primary via-[3%] to-primary rounded-[10px] h-52 w-72 md:w-auto  shadow-md shadow-shadow_color">
+
+            </div>
+            <div class="bg-gradient-to-r from-secondary from-[3%] via-primary via-[3%] to-primary rounded-[10px] h-52 w-72 md:w-auto  shadow-md shadow-shadow_color">
+
+            </div>
+            <div class="bg-gradient-to-r from-secondary from-[3%] via-primary via-[3%] to-primary rounded-[10px] h-52 w-72 md:w-auto  shadow-md shadow-shadow_color">
+
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <script>
+    feather.replace();
+  </script>
+</body>
+</html>
