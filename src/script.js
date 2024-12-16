@@ -8,6 +8,7 @@ const bell_button= document.querySelector("button[title='Notifications']");
 const bell_icon = document.getElementById('test');
 const dropdown = document.getElementById("dropdown");
 const dropdown_button = document.querySelector("button[title='More']");
+const body_div = document.querySelector("body>div");
 let bell_toggle_val = 0;
 
 function dropFunct ()
@@ -24,12 +25,16 @@ function menuFunctOpen ()
     sidebar.classList.remove('w-0')
     sidebar.classList.add('w-60');
     sidebar.classList.toggle('opened');
+    header.classList.toggle("blur-sm");
+    dashboard.classList.toggle("blur-sm");
 }
 function menuFunctExit ()
 {
     sidebar.classList.remove('w-60')
     sidebar.classList.add('w-0');
     sidebar.classList.toggle('opened');
+    dashboard.classList.toggle("blur-sm");
+    header.classList.toggle("blur-sm");
     
 }
 function changeBellIcon()
