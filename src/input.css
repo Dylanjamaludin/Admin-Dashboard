@@ -16,12 +16,14 @@
 
 .dark
 {
-    --bg:#242424;
+    --bg:#222222;
+    /* --bg:#121212; */
     --secondary: #03B5A9;
-    --primary:#313131;
+    --primary:#2B2b2b;
+    /* --primary:#222222; */
     --contrast: #727272;
-    --hover:#2D2D2D;
-    --text: #FFFFFF;
+    --hover:#3b3b3b;
+    --text: #FFFFFF; 
     --shadow:#00000055;
-    --icon: #d4d4d4;
+    --icon: #ffffff;
 }
